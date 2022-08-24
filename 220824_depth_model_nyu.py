@@ -3,16 +3,6 @@ _base_ = [
     '../_base_/default_runtime.py'
 ]
 
-# test = dict(
-#     type='CustomDepthDataset', # use the custom dataset
-#     # pipeline=dict(...), # simple pipeline
-#     data_root='data/Unsplash_Collection', # path to your datset
-#     test_mode=True, # it is important to set test_model=True, hence only images will be loaded (from nfs/custom_dataset/rgb).
-#     min_depth=1e-3, # custom
-#     max_depth=10, # custom
-#     depth_scale=1 # custom
-#     )
-
 model = dict(
     pretrained='https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window7_224_22k.pth', # noqa
     backbone=dict(

@@ -57,7 +57,7 @@ class CustomDepthDataset(Dataset):
                  data_root='data/custom',
                  test_mode=True,
                  min_depth=1e-3,
-                 max_depth=10,
+                 max_depth=100,
                  depth_scale=1000):
 
         self.pipeline = Compose(pipeline)

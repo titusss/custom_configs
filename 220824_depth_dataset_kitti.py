@@ -24,7 +24,7 @@ train_pipeline = [
 ]
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', img_scale=(1216, 352)),
+    # dict(type='Resize', img_scale=(1216, 352)),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(0, 0),
@@ -72,7 +72,7 @@ data = dict(
         depth_scale=256,
         # split='kitti_eigen_test.txt',
         pipeline=test_pipeline,
-        garg_crop=True,
-        eigen_crop=False,
+        # garg_crop=True,
+        # eigen_crop=False,
         min_depth=1e-3,
         max_depth=80))

@@ -23,7 +23,7 @@ train_pipeline = [
 ]
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', img_scale=(480, 640)),
+    # dict(type='Resize', img_scale=(480, 640)),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(0, 0),
@@ -79,7 +79,7 @@ data = dict(
         data_root=data_root,
         depth_scale=1000,
         pipeline=test_pipeline,
-        garg_crop=False,
-        eigen_crop=True,
+        # garg_crop=False,
+        # eigen_crop=True,
         min_depth=1e-3,
         max_depth=10))

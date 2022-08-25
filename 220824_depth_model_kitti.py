@@ -25,7 +25,7 @@ model = dict(
         up_sample_channels=[64, 192, 384, 768, 1536],
         channels=64,
         min_depth=1e-3,
-        max_depth=10,
+        max_depth=80,
     ))
 # batch size
 data = dict(

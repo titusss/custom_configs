@@ -33,7 +33,9 @@ test_pipeline = [
             dict(type='RandomFlip', direction='horizontal'),
             dict(type='Normalize', **img_norm_cfg),
             dict(type='ImageToTensor', keys=['img']),
-            dict(type='Collect', keys=['img']),
+            dict(type='Collect',
+                keys=['img'],
+                meta_keys=('filename', 'cam_intrinsic')),
         ])
 ]
 
